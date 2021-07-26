@@ -26,15 +26,17 @@ public class PasswordValidator {
        do
        {
        String pass= in.next();
-       if(checkLength(pass)) // && checkUpper(pass) && checkSpecial(pass))
+       if(isValidPassword(pass))
        {
            valid = true;
+           
        }
        }while(!valid);
        
-       System.out.println("valid password" +valid);
+           System.out.println("valid password" +valid);
       }
-    public static boolean checkLength(String pass){
+
+    public static boolean isValidPassword(String pass){
         int flag=0;
         if (pass.length() >= 8) {
            flag=1;
@@ -54,19 +56,19 @@ public class PasswordValidator {
       
        if(flag==0)
        {
-           System.out.println("** Password length must be atleast 8 **");
+       System.out.println("** Password length must be atleast 8 **");
        }
        if(upperCnt<1){
-        System.out.println("Must Contain atleast one uppercase letter.");
+       System.out.println("Must Contain atleast one uppercase letter.");
         
        }
        
        if(specialCnt<1){
 
-        System.out.println("Must Contain atleast one special case letter.");
-        }
+       System.out.println("Must Contain atleast one special case letter.");
+       }
        
-        return !(upperCnt <1 || specialCnt < 1 || flag==0);
+       return !(upperCnt <1 || specialCnt < 1 || flag==0);
     }
     }
     

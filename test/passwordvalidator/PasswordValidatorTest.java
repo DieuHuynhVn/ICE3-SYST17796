@@ -50,66 +50,68 @@ public class PasswordValidatorTest {
     }
     */
     /**
-     * Test of checkLength method, of class PasswordValidator.
+     * Test of isValidPassword method, of class PasswordValidator.
      */
     @Test
-    public void testCheckLengthGood1() {
-        System.out.println("checkLength Good1");
+    public void testIsValidPasswordGood1() {
+        System.out.println("ValidPassword Good1");
         String pass = "Dieuhuynh@";
         boolean expResult = true;
-        boolean result = PasswordValidator.checkLength(pass);
+        boolean result = PasswordValidator.isValidPassword(pass);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
     @Test
-    public void testCheckLengthGood2() {
-        System.out.println("checkLength Good2");
+    public void testIsValidPasswordGood2() {
+        System.out.println("ValidPassword Good2");
         String pass = "Sheridan!";
         boolean expResult = true;
-        boolean result = PasswordValidator.checkLength(pass);
+        boolean result = PasswordValidator.isValidPassword(pass);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
     @Test
-    public void testCheckLengthBad1() {
-        System.out.println("checkLength Bad1");
+    public void testIsValidPasswordBad1() {
+        System.out.println("InvalidPassword Bad1");
         String pass = "dieu";
         boolean expResult = false;
-        boolean result = PasswordValidator.checkLength(pass);
+        boolean result = PasswordValidator.isValidPassword(pass);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
     @Test
-    public void testCheckLengthBad2() {
-        System.out.println("checkLength Bad2");
+    public void testIsValidPasswordBad2() {
+        System.out.println("InvalidPassword Bad2");
         String pass = "Dieuhuynh";
         boolean expResult = false;
-        boolean result = PasswordValidator.checkLength(pass);
+        boolean result = PasswordValidator.isValidPassword(pass);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
     @Test
-    public void testCheckLengthBoundary1() {
-        System.out.println("checkLength Boundary1");
+    public void testIsValidPasswordBoundary1() {
+        System.out.println("InvalidPassword Boundary1");
         String pass = " ";
         boolean expResult = false;
-        boolean result = PasswordValidator.checkLength(pass);
+        boolean result = PasswordValidator.isValidPassword(pass);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
+   
     @Test
-    public void testCheckLengthBoundary2() {
-        System.out.println("checkLength Boundary2");
+    public void testIsValidPasswordBoundary2() {
+        System.out.println("InvalidPassword Boundary2");
         String pass = "s";
         boolean expResult = false;
-        boolean result = PasswordValidator.checkLength(pass);
+        boolean result = PasswordValidator.isValidPassword(pass);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
+    
 }
